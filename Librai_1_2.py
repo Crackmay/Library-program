@@ -27,23 +27,23 @@ color2 = fg("red")
 #Contraseña
 def clave(createPassw):
 
-        validar=False #que se vayan cumpliendo los requisitos uno a uno.
-        long=len(createPassw) #Calcula la longitud de la contraseña
-        mayuscula=False #variable para identificar letras mayúsculas
-        minuscula=False #variable para contar identificar letras minúsculas
-        numeros=False #variable para identificar números
-        correcto=True #verifica que hayan mayuscula, minuscula, numeros y no alfanuméricos
+        validar=False 
+        long=len(createPassw) 
+        mayuscula=False 
+        minuscula=False 
+        numeros=False 
+        correcto=True
         
-        for carac in createPassw: #ciclo for que recorre caracter por caracter en la contraseña
+        for carac in createPassw: 
 
-            if carac.isupper()== True: #saber si hay mayuscula
-                mayuscula=True #acumulador o contador de mayusculas
+            if carac.isupper()== True: 
+                mayuscula=True 
                 
-            if carac.islower()== True: #saber si hay minúsculas
-                minuscula=True #acumulador o contador de minúsculas
+            if carac.islower()== True:
+                minuscula=True
                 
-            if carac.isdigit()== True: #saber si hay números
-                numeros=True #acumulador o contador de numeros
+            if carac.isdigit()== True: 
+                numeros=True 
         else:
             validar=True 
                        
@@ -52,9 +52,9 @@ def clave(createPassw):
             validar=False 
 
         if mayuscula == True and minuscula ==True and numeros == True and validar ==True:
-           validar = True #Cumple el requisito de tener mayuscula, minuscula, numeros y no alfanuméricos
+           validar = True 
         else:
-           correcto=False #uno o mas requisitos de mayuscula, minuscula, numeros y no alfanuméricos no se cumple
+           correcto=False 
            
         if validar == True and correcto==False:
            print("La contraseña elegida no es segura: debe contener letras minúsculas, mayúsculas, números y al menos 1 carácter no alfanumérico")
@@ -69,9 +69,9 @@ def Registro_usuario():
     
     global enteredName
 
-    enteredName = input(color + "introdusca su nombre:" + reset)
+    enteredName = input(color + "introduzca su nombre:" + reset)
 
-    enteredPassword = input(color + "introdusca su contraseña:" + reset)
+    enteredPassword = input(color + "introduzca su contraseña:" + reset)
 
     if enteredName in users and users[enteredName] == enteredPassword:
         print(" Inicio de sesion correcto\n")
@@ -80,13 +80,13 @@ def Registro_usuario():
         print(" Inicio de sesion correcto\n")
         usuario()
     else:
-        print(color2 + "El inicio de sesion es incorecto intentalo de nuevo\n" + reset)
+        print(color2 + "El inicio de sesion es incorecto, intentalo de nuevo\n" + reset)
         Registro_usuario()
         
 #Menu de actividades
     
 def desicion_2():            
-    print ("Bienvenido Trabajador, que desas reallizar:")
+    print ("Bienvenido Trabajador, que desas realizar:")
     
     print (color + "1.Ingresar o eliminar Id.\n"
             "2.Registro de Id.\n"
@@ -242,7 +242,7 @@ def actividad_6():
 #7ºActividad
 
 def actividad_7():
-    print("Que deseas realiazar")
+    print("Que deseas realizar")
     print(color + "A. Revisar noticia.\nB. Agregar noticia." + reset)
     noticias = input()
     if noticias == "a":
@@ -255,7 +255,7 @@ def actividad_7():
         noticias_his[fecha] = datos
         p_Menu()
     else:
-        print(color2 + "Respuesta invalida, intenmtalo de nuevo.\n" + reset)
+        print(color2 + "Respuesta invalida, intentalo de nuevo.\n" + reset)
         actividad_7()
 
 #8ºActividad
@@ -266,7 +266,7 @@ def Actividad_8():
     time.sleep(1)
     os.system ("cls")
 
-#2ºactividades
+#p_Menu
 
 def p_Menu():
 
